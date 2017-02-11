@@ -3,5 +3,10 @@
   "description": "",
   "logo": "https://raw.githubusercontent.com/FZambia/go-javascript-template/master/app/assets/images/hello.png",
   "keywords": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/heroku-buildpack-go"
+    }
+  ],  
   "env": {}
 }
