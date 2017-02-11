@@ -1,4 +1,4 @@
 node_modules/
-app/build/
-app/dist/
+client/build/
+client/dist/
 .vscode/

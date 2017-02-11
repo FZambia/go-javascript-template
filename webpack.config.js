@@ -12,14 +12,14 @@ module.exports = {
   entry: {
     app: [
       'babel-polyfill',
-      path.resolve(__dirname, 'app/src/scripts/main.js')
+      path.resolve(__dirname, 'client/src/scripts/main.js')
     ],
     vendor: ['webfontloader']
   },
   devtool: 'cheap-source-map',
   output: {
     pathinfo: true,
-    path: path.resolve(__dirname, 'app/build'),
+    path: path.resolve(__dirname, 'client/build'),
     publicPath: './',
     filename: 'bundle.js'
   },
@@ -34,19 +34,19 @@ module.exports = {
       host: process.env.IP || 'localhost',
       port: process.env.PORT || 3000,
       server: {
-        baseDir: ['./app/build/']
+        baseDir: ['./client/build/']
       }
     }),
     new CopyWebpackPlugin([{
-      from: 'app/assets'
+      from: 'client/assets'
     }]),
     new HtmlWebpackPlugin({
-      template: 'app/src/index.html'
+      template: 'client/src/index.html'
     })
   ],
   module: {
     rules: [
-      { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'app/src') }
+      { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'client/src') }
     ]
   },
   node: {

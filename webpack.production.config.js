@@ -11,13 +11,13 @@ module.exports = {
   entry: {
     app: [
       'babel-polyfill',
-      path.resolve(__dirname, 'app/src/scripts/main.js')
+      path.resolve(__dirname, 'client/src/scripts/main.js')
     ],
     vendor: ['webfontloader']
 
   },
   output: {
-    path: path.resolve(__dirname, 'app/dist'),
+    path: path.resolve(__dirname, 'client/dist'),
     publicPath: './',
     filename: 'bundle.[chunkhash].js'
   },
@@ -36,15 +36,15 @@ module.exports = {
       filename: 'vendor.bundle.[chunkhash].js'
     }),
     new CopyWebpackPlugin([{
-      from: 'app/assets'
+      from: 'client/assets'
     }]),
     new HtmlWebpackPlugin({
-      template: 'app/src/index.html'
+      template: 'client/src/index.html'
     })
   ],
   module: {
     rules: [
-      { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'app/src') }
+      { test: /\.js$/, use: ['babel-loader'], include: path.join(__dirname, 'client/src') }
     ]
   },
   node: {
