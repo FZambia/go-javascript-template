@@ -4,6 +4,10 @@ An opinionated bootstrap project template to create simple SPA applications with
 
 It uses Webpack to create Javascript application bundles and [statik](https://github.com/rakyll/statik) tool to embed resulting application into Go binary. As result you get ready to deploy single self-contained binary that will work without dependencies everywhere.
 
+For example deploy to Heroku in one click:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/FZambia/go-javascript-template)
+
 ## Setup
 
 To use this bootstrap you’ll need to install a few things before you have a working copy of the project.
@@ -43,7 +47,7 @@ Run:
 
 ```npm run dev```
 
-This will run a server so you can run the game in a browser.
+This will run a server so you can run the app in a browser.
 
 Open your browser and enter localhost:3000 into the address bar.
 
