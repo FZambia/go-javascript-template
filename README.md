@@ -8,6 +8,8 @@ For example deploy to Heroku in one click:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/FZambia/go-javascript-template)
 
+And get something [like this](https://go-javascript-template.herokuapp.com/).
+
 ## Setup
 
 To use this bootstrap you’ll need to install a few things before you have a working copy of the project.
