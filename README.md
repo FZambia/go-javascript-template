@@ -1,6 +1,6 @@
 # Go + Javascript bootstrap template.
 
-An opinionated bootstrap project template to create simple SPA client-server applications with Javascript frontend and Go language backend.
+An opinionated bootstrap project template to create simple SPA applications with Javascript frontend and Go language backend.
 
 It uses Webpack to create Javascript app bundles and [statik](https://github.com/rakyll/statik) tool to embed resulting application into Go binary. As result you get ready to deploy single self-contained binary that will work without dependencies everywhere.
 
@@ -75,17 +75,17 @@ npm test
 go run main.go -web
 ```
 
-## Serve app client from custom directory
+## Serve app from custom directory
 
 ```
-go run main.go -web -web_path=client/build
+go run main.go -web -web_path=app/build
 ```
 
 ## Update embedded web app from Webpack generated dist 
 
 ```
 npm run deploy
-statik -src=client/dist -dest ./
+statik -src=app/dist -dest ./
 ```
 
 ## Features
