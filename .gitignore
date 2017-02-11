@@ -1,0 +1,4 @@
+node_modules/
+app/build/
+app/dist/
+.vscode/
