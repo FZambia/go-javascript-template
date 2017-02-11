@@ -3,11 +3,10 @@ package main
 import (
 	"flag"
 	"log"
-	"net/http"
 
-	_ "github.com/FZambia/go-javascript-template/statik" // TODO: Replace with your import path
+	_ "github.com/FZambia/go-javascript-template/statik"
 
-	"github.com/rakyll/statik/fs"
+	"github.com/FZambia/go-javascript-template/server"
 )
 
 var addr = flag.String("addr", ":8000", "http service address")
@@ -16,16 +15,12 @@ var webPath = flag.String("web_path", "", "path to custom web app directory to s
 
 func main() {
 	flag.Parse()
-	if *web {
-		var appFS http.FileSystem
-		if *webPath != "" {
-			appFS = http.Dir("app")
-		} else {
-			appFS, _ = fs.New()
-		}
-		http.Handle("/", http.FileServer(appFS))
+	conf := &server.Config{
+		Address: *addr,
+		Web:     *web,
+		WebPath: *webPath,
 	}
-	if err := http.ListenAndServe(*addr, nil); err != nil {
-		log.Fatal("ListenAndServe: ", err)
+	if err := server.Run(conf); err != nil {
+		log.Fatal("Run server error: ", err)
 	}
 }
