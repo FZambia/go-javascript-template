@@ -1,6 +1,13 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "O0asenq7jOGImefcXVxJvBrNxu4=",
+			"path": "github.com/rakyll/statik/fs",
+			"revision": "a2b9c3533409cccb4bb188346bcfc789629a424d",
+			"revisionTime": "2017-01-07T02:50:54Z"
+		}
+	],
 	"rootPath": "github.com/FZambia/go-javascript-template"
 }
