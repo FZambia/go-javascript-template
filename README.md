@@ -69,23 +69,23 @@ This will optimize and minimize the compiled bundle.
 npm test
 ```
 
-## Run Go server with builtin web app
+## Run Go server with embedded web app
 
 ```
-go run main.go
+go run main.go -web
 ```
 
-## Serve app that was built with Webpack using Go
+## Serve app client from custom directory
 
 ```
-go run main.go --web_path=app/dist
+go run main.go -web -web_path=client/build
 ```
 
-## Update built-in web app in Go
+## Update embedded web app from Webpack generated dist 
 
 ```
 npm run deploy
-statik -src=app/dist -dest ./
+statik -src=client/dist -dest ./
 ```
 
 ## Features
