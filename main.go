@@ -5,7 +5,7 @@ import (
 	"log"
 	"net/http"
 
-	_ "./statik" // TODO: Replace with the absolute import path
+	_ "github.com/FZambia/go-javascript-template/statik" // TODO: Replace with your import path
 
 	"github.com/rakyll/statik/fs"
 )
